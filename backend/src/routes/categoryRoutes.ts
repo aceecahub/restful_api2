@@ -14,6 +14,6 @@ const categoryRoutes = new Elysia({ prefix: "/api/category" })
     .get("/:id", CategoryController.getById, { params: idParamSchema })
     .post("/", CategoryController.create, { body: categoryBodySchema })
     .put("/:id", CategoryController.update, { params: idParamSchema, body: categoryBodySchema })
-    .delete("/:id", CategoryController.destroy, { params: idParamSchema })
+    .delete("/:id", CategoryController.delete, { params: idParamSchema })
 
 export default categoryRoutes
